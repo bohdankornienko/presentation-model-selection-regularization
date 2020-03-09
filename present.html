@@ -418,11 +418,131 @@
                     </table>
                 </section>
 
+                <section>
+                    <section>
+                        <h1>Model Selection</h1>
+                    </section>
+
+                    <section>
+                        <h1>Train</h1>
+                        <img class="stretch" src="images/dataset_split-100.png">
+                        <p>What good, what bad about that?</p>
+                    </section>
+
+                    <section>
+                        <h1>Train-Val</h1>
+                        <img class="stretch" src="images/dataset_split-70-30.png">
+                        <p>What good, what bad about that?</p>
+                    </section>
+
+                    <section>
+                        <h1>Train-Val-Test</h1>
+                        <img class="stretch" src="images/dataset_split-60-20-20.png">
+                        <p>What good, what bad about that?</p>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h1>Ablative Analysis</h1>
+                        <p>Suppose that you’ve build a good anti-spam classifier by adding lots of clever features to logistic regression</p>
+
+                        <table style="font-size: xx-large;">
+                          <tr>
+                            <th>Component</th>
+                          </tr>
+                          <tr>
+                            <td>Spelling correction</td>
+                          </tr>
+                          <tr>
+                            <td>Sender host features</td>
+                          </tr>
+                          <tr>
+                            <td>Email header features</td>
+                          </tr>
+                          <tr>
+                            <td>Email text parser features</td>
+                          </tr>
+                          <tr>
+                            <td>Javascript parser</td>
+                          </tr>
+                          <tr>
+                            <td>Features from embedded images</td>
+                          </tr>
+                        </table>
+                    </section>
+
+                    <section>
+                        <p>Simple logistic regression without any clever features get 94% performance.</p>
+                        <p>Just what accounts for your improvement from 94 to 99.9%?</p>
+                    </section>
+                    <section>
+                        <h1>Ablative analysis</h1>
+                        <p>Remove components from your system one at a time, to see how it breaks.</p>
+                    </section>
+
+                    <section>
+                        <table style="font-size: xx-large;">
+                          <tr>
+                            <th>Component</th>
+                            <th>Accuracy (%)</th>
+                          </tr>
+                          <tr>
+                            <td>Overall System</td>
+                            <td>99.9</td>
+                          </tr>
+                          <tr>
+                            <td>Spelling correction</td>
+                            <td>99.0</td>
+                          </tr>
+                          <tr>
+                            <td>Sender host features</td>
+                            <td>98.9</td>
+                          </tr>
+                          <tr>
+                            <td>Email header features</td>
+                            <td>98.9</td>
+                          </tr>
+                          <tr>
+                            <td>Email text parser features</td>
+                            <td>95</td>
+                          </tr>
+                          <tr>
+                            <td>Javascript parser</td>
+                            <td>95.5</td>
+                          </tr>
+                          <tr>
+                            <td>Features from embedded images</td>
+                            <td>94.0</td>
+                          </tr>
+                        </table>
+
+                        <p>Conclusion: The email text parser features account for most of the improvement.</p>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h1>Piece of advice on diagnostics</h1>
+                    </section>
+                    <section>
+                        <p>Understanding your application problem: If you are working on one important ML application for months/years, it's very valuable for you personally to get a intuitive understand what works and what does not work in your problem.</p>
+                    </section>
+                    <section>
+                        <p>Writing research papers: Diagnostics and error analysis help convey insight about the problem, and justify your research claims.</p>
+                    </section>
+                    <section>
+                        <p>Rather than saying "Here is an algorithm that works," it is more interesting to say “Here is an algorithm that works because of component X, and here is my justification."</p>
+                    </section>
+                </section>
+
+
                 <section><h1>References</h1>
                     <ul>
-                        <li><a href="http://www.computervisionmodels.com/">Computer Vision Models Book</a></li>
-                        <li><a href="http://www.amazon.com/Digital-Image-Processing-3rd-Edition/dp/013168728X">Digital Image Processing: Rafael C. Gonzalez</a></li>
-                        <li><a href="http://cs231n.stanford.edu/">Stanford University CS231n: Convolutional Neural Networks for Visual Recognition</a></li>
+                        <li><a href="https://towardsdatascience.com/regularization-in-machine-learning-76441ddcf99a">Regularization in Machine Learning</a></li>
+                        <li><a href="https://www.youtube.com/playlist?list=PLLssT5z_DsK-h9vYZkQkYNWcItqhlRJLN">Andre Ng's ML cource, sections 7, 10</a></li>
+                        <li><a href="https://www.manning.com/books/deep-learning-with-pytorch">Deep Learning with PyTorch</a></li>
+                        <li><a href="http://faculty.marshall.usc.edu/gareth-james/ISL/">Introduction To Statistical Learning</a></li>
                     </ul>
                 </section>
 
@@ -431,7 +551,7 @@
                 </section>
 
                 <section>
-                    <img src="images/qr_link.png">
+                    <img class="stretch" src="images/qr_link.png">
                 </section>
 
 			</div>
